@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJack.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,19 @@ namespace BlackJack
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnCrearCarta_Click(object sender, EventArgs e)
+        {
+            Dealer d = new Dealer();
+            d.Generate();
+
+            rtxtResults.Text ="";
+             
+            foreach (Card c in d.GetDeck())
+            {
+                rtxtResults.Text += c.Symbol + c.Suit + " -score " + c.Score + "color:" + c.CardColor + "\n";
+            }
         }
     }
 }

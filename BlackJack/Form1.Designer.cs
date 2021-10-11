@@ -29,13 +29,45 @@ namespace BlackJack
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnCrearCarta = new System.Windows.Forms.Button();
+            this.rtxtResults = new System.Windows.Forms.RichTextBox();
+            this.SuspendLayout();
+            // 
+            // btnCrearCarta
+            // 
+            this.btnCrearCarta.Location = new System.Drawing.Point(119, 127);
+            this.btnCrearCarta.Name = "btnCrearCarta";
+            this.btnCrearCarta.Size = new System.Drawing.Size(75, 23);
+            this.btnCrearCarta.TabIndex = 0;
+            this.btnCrearCarta.Text = "Agregar";
+            this.btnCrearCarta.UseVisualStyleBackColor = true;
+            this.btnCrearCarta.Click += new System.EventHandler(this.btnCrearCarta_Click);
+            // 
+            // rtxtResults
+            // 
+            this.rtxtResults.Location = new System.Drawing.Point(309, 42);
+            this.rtxtResults.Name = "rtxtResults";
+            this.rtxtResults.Size = new System.Drawing.Size(279, 227);
+            this.rtxtResults.TabIndex = 2;
+            this.rtxtResults.Text = "";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(637, 450);
+            this.Controls.Add(this.rtxtResults);
+            this.Controls.Add(this.btnCrearCarta);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnCrearCarta;
+        private System.Windows.Forms.RichTextBox rtxtResults;
     }
 }
 

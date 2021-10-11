@@ -31,10 +31,10 @@ namespace BlackJack.Modelos
 
             if (symbol == "A")
                 Score = 11;
-            else if (symbol == "J" || symbol == "Q" || symbol == "K")          
+            else if ( symbol == "J" || symbol == "Q" || symbol == "K")          
                 Score = 10;
             else
-                Score = Convert.ToInt16(symbol);
+                Score = Convert.ToInt32(symbol);
         }
     }
 }
