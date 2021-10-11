@@ -13,8 +13,29 @@ namespace BlackJack.Modelos
 
         public int Score { get; set; }
 
-        public Color { get; set; }
+        public Color CardColor { get; set; }
 
+        public Card(char suit, string symbol)
+        {
+            Suit = suit;
+            Symbol = symbol;
+
+            if (suit.Equals('♥') || suit == '♦')
+            {
+                CardColor = Color.RED;
+            }
+            else
+            {
+                CardColor = Color.BLACK;
+            }
+
+            if (symbol == "A")
+                Score = 11;
+            else if (symbol == "J" || symbol == "Q" || symbol == "K")          
+                Score = 10;
+            else
+                Score = Convert.ToInt16(symbol);
+        }
     }
 }
 
